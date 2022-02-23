@@ -9,6 +9,17 @@ use App\Models\Idea;
 
 class IdeaController extends Controller
 {
+
+    public function index()
+    {
+        $ideas = Idea::all();
+
+        return response()->json([
+            'status'=>200,
+            'ideas'=>$ideas,
+        ]);
+    }
+
     public function store (Request $request) {
         $idea = new Idea;
         $idea->titre = $request->input('titre');
