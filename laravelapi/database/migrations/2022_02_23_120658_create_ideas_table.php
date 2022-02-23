@@ -15,6 +15,9 @@ class CreateIdeasTable extends Migration
     {
         Schema::create('ideas', function (Blueprint $table) {
             $table->id();
+            $table->string("titre");
+            $table->string("desc");
+            $table->boolean("statut");
             $table->timestamps();
         });
     }
