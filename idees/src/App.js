@@ -8,9 +8,9 @@ function App() {
   return (
     <Router>
       <div>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Boite a idées</a>
+                    <Link className="navbar-brand" to="/">Boite a idées</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
@@ -18,6 +18,9 @@ function App() {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                         <Link to="/" className='nav-link'>Liste des idées</Link>
+                        </li>
+                        <li className="nav-item">
+                        <Link to="/add-idea" className='nav-link'>Ajouter une idée</Link>
                         </li>
                     </ul>
                     </div>
