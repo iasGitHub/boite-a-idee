@@ -1,14 +1,32 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Idea from './pages/idees';
-import add from './pages/Add';
+import Add from './pages/Add';
 
 function App() {
   return (
     <Router>
+      <div>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#">Boite a idées</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                        <Link to="/" className='nav-link'>Liste des idées</Link>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+      </div>
         <Switch>
             <Route exact path="/" component={Idea}/>
-            <Route path="/add-idea" component={add}/>
+            <Route path="/add-idea" component={Add}/>
         </Switch>
     </Router>
   );
