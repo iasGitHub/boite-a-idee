@@ -35,7 +35,7 @@ function Add() {
                     desc: '',
                     error_list: [],
                 });
-                history.push('/idees');
+                history.push('/');
             }
             else if(res.data.status === 422)
             {
