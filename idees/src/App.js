@@ -3,6 +3,7 @@ import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import Idea from './pages/idees';
 import Add from './pages/Add';
+import Approuve from './pages/approuve';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Switch>
             <Route exact path="/" component={Idea}/>
             <Route path="/add-idea" component={Add}/>
+            <Route path="/approuve-idea" component={Approuve}/>
         </Switch>
     </Router>
   );
