@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('ideas', [IdeaController::class, 'index']);
 Route::post('/add-idea', [IdeaController::class, 'store']);
+Route::patch('/edit-status/{id}', [IdeaController::class, 'changeStatus']);
 
 
 
